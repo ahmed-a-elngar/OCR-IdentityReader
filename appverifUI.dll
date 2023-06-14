@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "b87772fa-af71-4d76-b989-aea7a56b1dec",
+		"name": "ocr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25475688"
+	},
+	"item": [
+		{
+			"name": "get text from image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"description": "target image",
+							"type": "file",
+							"src": "/C:/xampp-8/htdocs/ocr/turkish_copy/public/imgs/9.jpg"
+						},
+						{
+							"key": "module",
+							"value": "1",
+							"description": "target model",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/extract",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"extract"
+					],
+					"query": [
+						{
+							"key": "image",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "enquiry user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/enquiry?identity_id=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"enquiry"
+					],
+					"query": [
+						{
+							"key": "identity_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
