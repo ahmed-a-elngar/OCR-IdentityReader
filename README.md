@@ -22,3 +22,8 @@ A project that uses Tesseract and RegEx to extract details from Turkish National
         php artisan serve
       ```  
 6. Import [ocr.postman_collection](https://github.com/ahmed-a-elngar/OCR-IdentityReader/blob/main/ocr.postman_collection.json) which is a postman collection and enjoy it 😉
+
+# Information
+1. module number guide:
+    1. National Identification Card = 1
+    2. Licence Card = 2
